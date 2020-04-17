@@ -2,6 +2,7 @@ import React from "react"
 import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import "../components/blog.css"
 import Image from "gatsby-image"
 import Moment from "react-moment"
 
@@ -26,18 +27,35 @@ const PostTemplate = ({
   },
 }) => {
   return (
-    <Layout>
+    <Layout page="blog">
       <SEO title={title} />
-      <Link to="/blog">back to all articles</Link>
-      <article className="single-post">
+      <Link className="post-back-link" to="/blog">
+        <span role="img" aria-label="left arrow">
+          ◀️
+        </span>{" "}
+        all articles
+      </Link>
+      <article className="post single-post">
         <figure>{cover && <Image fixed={cover.fixed} alt={title} />}</figure>
         <h1>
           {title}{" "}
-          <span>
-            Created at: <Moment fromNow>{createdAt}</Moment>
-          </span>
+          <div className="post-meta">
+            <img
+              className="post-avatar"
+              src={"/laura.jpg"}
+              alt="Laura Gershman, Owner"
+            />
+            <p>
+              Posted by Laura,{" "}
+              <span className="time-posted">
+                <Moment fromNow>{createdAt}</Moment>
+              </span>
+            </p>
+          </div>
         </h1>
-        <p>{documentToReactComponents(content.json, options)}</p>
+        <div className="post-content">
+          {documentToReactComponents(content.json, options)}
+        </div>
       </article>
     </Layout>
   )

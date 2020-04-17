@@ -1,0 +1,63 @@
+.post:not(:last-child) {
+  margin-bottom: 4rem;
+}
+
+.post .post-content {
+  padding: 1rem 0;
+}
+
+.post ul li {
+  list-style: disc;
+}
+
+.post ol li {
+  list-style: decimal;
+}
+
+.single-post:first-of-type {
+  margin-top: 2rem;
+}
+
+.single-post .post-content {
+  padding-top: 0;
+}
+
+.post-back-link {
+  position: absolute;
+  top: 10px;
+  text-decoration: none;
+  border: none;
+}
+
+.post-meta {
+  display: flex;
+  margin-top: 1rem;
+}
+
+.post-meta p {
+  margin-bottom: 0;
+  font-style: italic;
+}
+
+.post-meta .time-posted {
+  border-bottom: 1px solid currentColor;
+}
+
+.post-avatar {
+  border-radius: 50%;
+  overflow: hidden;
+  height: 40px;
+  margin-right: 1rem;
+}
+
+.post blockquote {
+  border-left: 3px solid lightgray;
+  padding-left: 1.45rem;
+}
+
+@media screen and (min-width: 40em) {
+  .post .post-content {
+    padding-left: 2.6rem;
+    padding-right: 2rem;
+  }
+}

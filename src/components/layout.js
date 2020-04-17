@@ -10,10 +10,12 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
+import Footer from "./footer"
+
 import "./layout.css"
 import "./og.css"
 
-const Layout = ({ children }) => {
+const Layout = props => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -25,28 +27,19 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
+    <div className={props.page}>
+      <Header siteTitle={data.site.siteMetadata.title} page={props.page} />
+      <div>
+        <main>{props.children}</main>
+        <Footer siteTitle={data.site.siteMetadata.title} />
       </div>
-    </>
+    </div>
   )
 }
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
+  page: PropTypes.string,
 }
 
 export default Layout

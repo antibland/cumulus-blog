@@ -20,12 +20,17 @@
   --blue: hsl(210, 48%, 59%);
   --green: hsl(149, 52%, 58%);
   --border-radius: 4px;
+  --site-width: 960px;
 }
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+.plain-link {
+  border: none;
 }
 
 .masthead h1 {
@@ -193,6 +198,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 0 15px;
+  max-width: 100%;
 }
 
 .logo {
@@ -216,8 +222,7 @@ header {
   will-change: background-position;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-size: cover;
+  background-position: 30% 50%;
   padding: 5px 0 30px;
   width: 100%;
   display: flex;
@@ -233,10 +238,6 @@ header {
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.5);
-}
-
-.home .masthead {
-  height: 100vh;
 }
 
 .webp .masthead {
@@ -269,6 +270,7 @@ header {
   text-align: center;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .nav-link,
@@ -278,7 +280,9 @@ header {
 }
 
 .nav-link.active {
-  border: 1px solid var(--black);
+  font-weight: bold;
+  outline: 1px solid rgba(255, 255, 255, 0.7);
+  outline-offset: 1px;
 }
 
 .social-items {
@@ -286,6 +290,7 @@ header {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  margin: 0;
 }
 
 .social-item a {
@@ -383,6 +388,7 @@ main {
   padding: 60px 30px;
   max-width: 150vmin;
   flex-grow: 1;
+  position: relative;
 }
 
 #thanks .contact-form {
@@ -405,15 +411,7 @@ main > section {
   text-align: center;
   margin-top: 1.5em;
   margin-bottom: 1.5em;
-  position: relative;
-  opacity: 0;
-  transform: translateY(15px);
   transition: 0.75s opacity 0.2s, 0.75s transform 0.2s;
-}
-
-.pull-quote.show {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 .pull-quote > q {
@@ -484,7 +482,9 @@ footer p {
 
 footer p {
   margin-bottom: 0;
+  padding: 0 1em;
   line-height: 1;
+  font-size: 1rem;
 }
 
 footer .social-items {
@@ -916,11 +916,8 @@ li.oddball {
   }
 
   .nav-link {
-    padding: 0 15px;
-  }
-
-  .nav-link:last-child {
-    padding-right: 0;
+    padding: 0 7.5px;
+    color: rgba(255, 255, 255, 0.92);
   }
 
   .masthead {
@@ -928,13 +925,11 @@ li.oddball {
     max-width: 2000px;
   }
 
-  footer {
-    max-width: 2000px;
-  }
-
   main {
     margin: 0 auto;
-    padding: 90px;
+    padding: 60px 30px 45px;
+    width: var(--site-width);
+    max-width: 100%;
   }
 
   main > section {
@@ -1033,10 +1028,6 @@ li.oddball {
 
   .cancel-x {
     background-color: hsl(0, 0%, 21%);
-  }
-
-  .nav-link.active {
-    border: 1px solid hsl(0, 0%, 21%);
   }
 
   p,

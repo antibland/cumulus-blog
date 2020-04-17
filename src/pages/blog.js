@@ -3,6 +3,7 @@ import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Image from "gatsby-image"
+import "../components/blog.css"
 
 import { BLOCKS, MARKS } from "@contentful/rich-text-types"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
@@ -24,10 +25,16 @@ const Blog = ({ data }) => {
     allContentfulPost: { nodes: posts },
   } = data
 
+  // const truncateString = (string, maxLength = 50) => {
+  //   if (!string) return null
+  //   if (string.length <= maxLength) return string
+  //   return `${string.substring(0, maxLength)}...`
+  // }
+
   return (
-    <Layout>
+    <Layout page="blog">
       <SEO title="Blog" />
-      <h1>Blog</h1>
+
       {posts.map(post => {
         return (
           <article className="post" key={post.id}>
@@ -37,15 +44,15 @@ const Blog = ({ data }) => {
                 <Image fluid={post.cover.fluid} alt={post.title} />
               )}
             </Link>
-            <p>
+            <div className="post-content">
               {documentToReactComponents(post.content.json, options)}
-              <Link to={`/posts/${post.slug}`}>[full article…]</Link>
-            </p>
+              <Link className="plain-link" to={`/posts/${post.slug}`}>
+                [full article…]
+              </Link>
+            </div>
           </article>
         )
       })}
-
-      <pre>{JSON.stringify(data, null, 4)}</pre>
     </Layout>
   )
 }

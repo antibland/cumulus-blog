@@ -11,6 +11,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import Footer from "./footer"
+import TargetContent from "./targetContent"
 
 import "./layout.css"
 import "./og.css"
@@ -31,6 +32,7 @@ const Layout = props => {
       <Header siteTitle={data.site.siteMetadata.title} page={props.page} />
       <div>
         <main>{props.children}</main>
+        <TargetContent />
         <Footer siteTitle={data.site.siteMetadata.title} />
       </div>
     </div>

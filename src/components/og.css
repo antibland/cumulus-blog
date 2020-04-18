@@ -114,11 +114,11 @@ svg {
 
 .checkmark {
   color: var(--blue);
-  width: 1.3em;
-  height: 1.3em;
+  width: 1.1em;
+  height: 1.1em;
   position: absolute;
   left: -1.8em;
-  top: 0.1em;
+  top: 0.35em;
 }
 
 p,

@@ -39,14 +39,14 @@ const Blog = ({ data }) => {
         return (
           <article className="post" key={post.id}>
             <h2>{post.title}</h2>
-            <Link to={`/posts/${post.slug}`}>
+            <Link to={`/blog/${post.slug}`}>
               {post.cover && (
                 <Image fluid={post.cover.fluid} alt={post.title} />
               )}
             </Link>
             <div className="post-content">
               {documentToReactComponents(post.content.json, options)}
-              <Link className="plain-link" to={`/posts/${post.slug}`}>
+              <Link className="plain-link" to={`/blog/${post.slug}`}>
                 [full article…]
               </Link>
             </div>

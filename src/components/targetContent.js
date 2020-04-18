@@ -3,17 +3,17 @@ import React from "react"
 const targetContent = () => {
   return (
     <>
-      <section id="thanks" class="content-wrapper modal" aria-hidden="true">
+      <section id="thanks" className="content-wrapper modal" aria-hidden="true">
         <form
           method="POST"
           action="//formspree.io/laura.gershman1@gmail.com"
-          class="contact-form"
+          className="contact-form"
         >
-          <div class="flash-message">
-            <p class="larger">Message sent.</p>
+          <div className="flash-message">
+            <p className="larger">Message sent.</p>
             <p>Thank you.</p>
           </div>
-          <a aria-label="close modal" href="#close" class="cancel-x">
+          <a aria-label="close modal" href="#close" className="cancel-x">
             <svg>
               <use xlinkHref="/svg-defs.svg#svg-close" />
             </svg>
@@ -21,16 +21,20 @@ const targetContent = () => {
         </form>
       </section>
 
-      <section id="about" class="content-wrapper modal full" aria-hidden="true">
-        <div class="inner">
-          <a aria-label="close modal" href="#close" class="cancel-x">
+      <section
+        id="about"
+        className="content-wrapper modal full"
+        aria-hidden="true"
+      >
+        <div className="inner">
+          <a aria-label="close modal" href="#close" className="cancel-x">
             <svg>
               <use xlinkHref="/svg-defs.svg#svg-close" />
             </svg>
           </a>
         </div>
-        <div class="content">
-          <h1 class="modal-header h1 no-animation">
+        <div className="content">
+          <h1 className="modal-header h1 no-animation">
             Meet the Owner, Laura Gershman
           </h1>
           <p>

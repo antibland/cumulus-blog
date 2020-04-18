@@ -5,7 +5,7 @@ const MainMenu = () => (
   <nav role="main">
     <ul className="nav-items">
       <li className="nav-item">
-        <a class="nav-link" href="#about">
+        <a className="nav-link" href="#about">
           About
         </a>
       </li>

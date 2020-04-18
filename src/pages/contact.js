@@ -27,7 +27,7 @@ const contact = () => {
             <input
               aria-label="your email."
               required
-              autocapitalize="none"
+              autoCapitalize="none"
               type="email"
               name="email"
               placeholder="Email…"

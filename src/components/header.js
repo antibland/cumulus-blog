@@ -12,6 +12,7 @@ const MESSAGES = {
 
 const Header = props => {
   const { siteTitle, page } = props
+
   return (
     <section className="masthead">
       <header>
@@ -23,7 +24,7 @@ const Header = props => {
           </svg>
         </Link>
 
-        <MainMenu />
+        <MainMenu page={page} />
       </header>
 
       {page.length && (

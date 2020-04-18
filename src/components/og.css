@@ -697,6 +697,10 @@ button {
   width: 100%;
 }
 
+.vector-button.email-button {
+  margin-bottom: 3rem;
+}
+
 .vector-button .svg-icon {
   background-color: var(--light-gray);
   display: inline-flex;

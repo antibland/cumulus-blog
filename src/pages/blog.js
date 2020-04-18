@@ -5,31 +5,10 @@ import SEO from "../components/seo"
 import Image from "gatsby-image"
 import "../components/blog.css"
 
-import { BLOCKS, MARKS } from "@contentful/rich-text-types"
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
-
-const Bold = ({ children }) => <span className="bold">{children}</span>
-const Text = ({ children }) => <p className="align-center">{children}</p>
-
-const options = {
-  renderMark: {
-    [MARKS.BOLD]: text => <Bold>{text}</Bold>,
-  },
-  renderNode: {
-    [BLOCKS.PARAGRAPH]: (node, children) => <Text>{children}</Text>,
-  },
-}
-
 const Blog = ({ data }) => {
   const {
     allContentfulPost: { nodes: posts },
   } = data
-
-  // const truncateString = (string, maxLength = 50) => {
-  //   if (!string) return null
-  //   if (string.length <= maxLength) return string
-  //   return `${string.substring(0, maxLength)}...`
-  // }
 
   return (
     <Layout page="blog">
@@ -45,9 +24,9 @@ const Blog = ({ data }) => {
               )}
             </Link>
             <div className="post-content">
-              {documentToReactComponents(post.content.json, options)}
+              <p className="post-summary">{post.summary.summary}</p>
               <Link className="plain-link" to={`/blog/${post.slug}`}>
-                [full article…]
+                read full post
               </Link>
             </div>
           </article>
@@ -63,8 +42,8 @@ export const query = graphql`
       nodes {
         id
         title
-        content {
-          json
+        summary {
+          summary
         }
         slug
         createdAt

@@ -2,9 +2,9 @@ import React from "react"
 import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import "../components/blog.css"
 import Image from "gatsby-image"
 import Moment from "react-moment"
+import "../components/blog.css"
 
 import { BLOCKS, MARKS } from "@contentful/rich-text-types"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
@@ -33,7 +33,7 @@ const PostTemplate = ({
         <svg aria-hidden="true">
           <use xlinkHref="/svg-defs.svg#svg-back-arrow" />
         </svg>
-        all articles
+        all posts
       </Link>
       <article className="post single-post">
         <figure>{cover && <Image fixed={cover.fixed} alt={title} />}</figure>

@@ -273,13 +273,13 @@ header {
   justify-content: center;
 }
 
-.nav-link,
 .social-item {
   opacity: 0;
   animation: 0.8s fade-in forwards 0.7s;
 }
 
-.nav-link.active {
+.nav-link.active,
+.nav-link:focus {
   font-weight: bold;
   outline: 1px solid rgba(255, 255, 255, 0.7);
   outline-offset: 1px;

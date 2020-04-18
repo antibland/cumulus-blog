@@ -30,9 +30,9 @@ const PostTemplate = ({
     <Layout page="blog">
       <SEO title={title} />
       <Link className="post-back-link" to="/blog">
-        <span role="img" aria-label="left arrow">
-          ◀️
-        </span>{" "}
+        <svg aria-hidden="true">
+          <use xlinkHref="/svg-defs.svg#svg-back-arrow" />
+        </svg>
         all articles
       </Link>
       <article className="post single-post">

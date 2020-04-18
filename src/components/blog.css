@@ -27,6 +27,13 @@
   top: 10px;
   text-decoration: none;
   border: none;
+  display: inline-flex;
+  align-items: center;
+}
+
+.post-back-link svg {
+  width: 39px;
+  height: 21px;
 }
 
 .post-meta {

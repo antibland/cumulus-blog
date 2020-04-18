@@ -5,7 +5,7 @@ import SEO from "../components/seo"
 
 const services = () => (
   <Layout page="services">
-    <SEO title="Home" />
+    <SEO title="Services" />
 
     <section className="long-message" id="services">
       <h3 className="vector-button email-button">

@@ -280,6 +280,7 @@ header {
   animation: 0.8s fade-in forwards 0.7s;
 }
 
+.logo:focus,
 .nav-link.active,
 .nav-link:focus {
   font-weight: bold;

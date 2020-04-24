@@ -44,8 +44,8 @@ const IndexPage = () => (
           <span role="img" aria-label="Thinking emoji">
             😤
           </span>
+          .
         </div>
-        .
       </p>
       <blockquote className="pull-quote">
         <q>

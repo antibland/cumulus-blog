@@ -9,26 +9,35 @@ const footer = ({ siteTitle }) => {
         <ul className="social-items">
           <li className="social-item">
             <a
+              aria-label="Laura Gershman's Quickbooks Pro Advisor profile"
               href="https://proadvisor.intuit.com/app/accountant/search?searchId=laura-gershman"
               rel="noopener"
             >
               <img
+                aria-hidden="true"
                 loading="lazy"
-                alt="Alignable logo."
+                alt="Quickbooks logo."
                 src="/quickbooks_icon.png"
               />
             </a>
           </li>
           <li className="social-item">
             <a
+              aria-label="Cumulus Bookkeeping Solutions on Alignable"
               href="https://www.alignable.com/portland-or/cumulus-bookkeeping-solutions"
               rel="noopener"
             >
-              <img loading="lazy" alt="Alignable logo." src="/alignable.png" />
+              <img
+                aria-hidden="true"
+                loading="lazy"
+                alt="Alignable logo"
+                src="/alignable.png"
+              />
             </a>
           </li>
           <li className="social-item">
             <a
+              aria-label="Laura Gershman's LinkedIn profile"
               href="https://www.linkedin.com/in/laura-gershman-70586955"
               rel="noopener"
             >
@@ -39,6 +48,7 @@ const footer = ({ siteTitle }) => {
           </li>
           <li className="social-item">
             <a
+              aria-label="Cumulus Bookkeeping Solutions on Facebook"
               href="https://www.facebook.com/Cumulus-Bookkeeping-Solutions-141002106557137/"
               rel="noopener"
             >

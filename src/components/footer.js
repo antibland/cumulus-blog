@@ -9,6 +9,18 @@ const footer = ({ siteTitle }) => {
         <ul className="social-items">
           <li className="social-item">
             <a
+              href="https://proadvisor.intuit.com/app/accountant/search?searchId=laura-gershman"
+              rel="noopener"
+            >
+              <img
+                loading="lazy"
+                alt="Alignable logo."
+                src="/quickbooks_icon.png"
+              />
+            </a>
+          </li>
+          <li className="social-item">
+            <a
               href="https://www.alignable.com/portland-or/cumulus-bookkeeping-solutions"
               rel="noopener"
             >

@@ -36,9 +36,12 @@
   background-position: 15px 50%;
   background-repeat: no-repeat;
   background-size: 80px auto;
-  background-color: rgba(244, 244, 244, 0.5);
+  background-color: rgb(244, 244, 244);
   position: relative;
   top: -2em;
+  overflow: hidden;
+  border-radius: var(--border-radius);
+  margin-bottom: 15px;
 }
 
 .covid-message p {

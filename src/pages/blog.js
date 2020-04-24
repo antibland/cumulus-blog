@@ -3,6 +3,7 @@ import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Image from "gatsby-image"
+import Moment from "react-moment"
 import "../components/blog.css"
 
 const Blog = ({ data }) => {
@@ -18,10 +19,18 @@ const Blog = ({ data }) => {
         return (
           <article className="post" key={post.id}>
             <h2>{post.title}</h2>
-            <Link to={`/blog/${post.slug}`}>
+            <Link className="post-cover-link" to={`/blog/${post.slug}`}>
               {post.cover && (
                 <Image fluid={post.cover.fluid} alt={post.title} />
               )}
+              <div className="post-time-wrapper">
+                <Moment className="post-time-month" format="MMM">
+                  {post.createdAt}
+                </Moment>
+                <Moment className="post-time-day" format="D">
+                  {post.createdAt}
+                </Moment>
+              </div>
             </Link>
             <div className="post-content">
               <p className="post-summary">{post.summary.summary}</p>
@@ -38,7 +47,7 @@ const Blog = ({ data }) => {
 
 export const query = graphql`
   {
-    allContentfulPost {
+    allContentfulPost(sort: { fields: createdAt, order: DESC }) {
       nodes {
         id
         title

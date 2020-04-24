@@ -60,7 +60,7 @@ exports.onClientEntry = () => {
       function onFirstTouch() {
         window.USER_IS_TOUCHING = true
         window.removeEventListener("touchstart", onFirstTouch, false)
-        window.removeEventListener("scroll", false)
+        window.removeEventListener("scroll", onFirstTouch, false)
       },
       false
     )

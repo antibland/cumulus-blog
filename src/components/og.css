@@ -377,6 +377,7 @@ header {
   position: relative;
   font-weight: normal;
   transition: 0.5s opacity, 0.2s;
+  top: 20px;
 }
 
 .message span {
@@ -850,6 +851,7 @@ li.oddball {
 
   .message h2 {
     max-width: 65%;
+    top: -10px;
   }
 
   h3 {

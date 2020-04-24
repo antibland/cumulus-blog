@@ -13,7 +13,7 @@ const contact = () => {
               <svg aria-hidden="true">
                 <use xlinkHref="/svg-defs.svg#svg-phone" />
               </svg>
-              <span className="button-text">Phone: (971) 361-8263</span>
+              <span className="button-text">971-361-8263</span>
             </a>
           </h3>
         </header>

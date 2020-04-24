@@ -8,16 +8,11 @@ const MainMenu = props => {
     <nav role="main">
       <ul className="nav-items">
         <li className="nav-item">
-          <a className="nav-link" href="#about">
-            About
-          </a>
-        </li>
-        <li className="nav-item">
           <Link
-            className={page === "services" ? `nav-link active` : `nav-link`}
-            to="/services"
+            className={page === "home" ? `nav-link active` : `nav-link`}
+            to="/"
           >
-            Services
+            Home
           </Link>
         </li>
         <li className="nav-item">

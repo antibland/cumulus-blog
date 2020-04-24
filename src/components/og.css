@@ -30,8 +30,38 @@
   box-sizing: border-box;
 }
 
+.covid-message {
+  background-image: url("../images/covid.png");
+  padding: 1em 1em 1em 105px;
+  background-position: 15px 50%;
+  background-repeat: no-repeat;
+  background-size: 80px auto;
+  background-color: rgba(244, 244, 244, 0.5);
+  position: relative;
+  top: -2em;
+}
+
+.covid-message p {
+  margin: 0;
+}
+
 .plain-link {
   border: none;
+}
+
+.laura-cropped {
+  margin: 0 auto 1.45em;
+  text-align: center;
+}
+
+.laura-cropped img {
+  margin-bottom: 0;
+}
+
+.laura-cropped figcaption {
+  font-style: italic;
+  font-size: 0.8rem;
+  text-align: center;
 }
 
 .masthead h1 {
@@ -412,9 +442,10 @@ main > section {
   display: block;
   background: white;
   text-align: center;
-  margin-top: 1.5em;
+  margin-top: 0;
   margin-bottom: 1.5em;
-  transition: 0.75s opacity 0.2s, 0.75s transform 0.2s;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .pull-quote > q {
@@ -975,6 +1006,12 @@ li.oddball {
 }
 
 @media screen and (min-width: 40em) {
+  .index-message-container {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    grid-gap: 15px;
+  }
+
   form {
     padding: 3em 2em;
   }
@@ -986,7 +1023,6 @@ li.oddball {
 
   .message h2 {
     font-size: 350%;
-    top: -50px;
   }
 
   #about .content {

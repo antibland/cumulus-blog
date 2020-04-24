@@ -4,8 +4,7 @@ import React from "react"
 import MainMenu from "./menu"
 
 const MESSAGES = {
-  home: "Welcome",
-  services: "My Services",
+  home: "Let's Make a Plan",
   blog: "Cumulus Blog",
   contact: "Contact Me",
 }

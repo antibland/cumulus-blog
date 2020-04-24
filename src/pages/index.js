@@ -22,7 +22,7 @@ const IndexPage = () => (
       <h3 className="header h3">
         I work with my clients directly, every step of the way.
       </h3>
-      <p className="index-message-container">
+      <div className="index-message-container">
         <figure className="laura-cropped">
           <img
             loading="lazy"
@@ -32,21 +32,23 @@ const IndexPage = () => (
           <figcaption>Laura Gershman, owner</figcaption>
         </figure>
         <div className="content">
-          You wear many hats as a small business owner. You focus your time and
-          energy on getting and keeping customers and providing the best service
-          for your clients. Generally, you are pretty organized and proactive
-          when it comes to your business. Maybe you have been trying to keep up
-          with your books but you have a nagging feeling you are missing
-          something or not doing it right. Or maybe you are delegating the
-          bookkeeping to a family member or employee and trusting they are doing
-          it right. Or...maybe you have given up or never even started
-          bookkeeping{" "}
-          <span role="img" aria-label="Thinking emoji">
-            😤
-          </span>
-          .
+          <p>
+            You wear many hats as a small business owner. You focus your time
+            and energy on getting and keeping customers and providing the best
+            service for your clients. Generally, you are pretty organized and
+            proactive when it comes to your business. Maybe you have been trying
+            to keep up with your books but you have a nagging feeling you are
+            missing something or not doing it right. Or maybe you are delegating
+            the bookkeeping to a family member or employee and trusting they are
+            doing it right. Or...maybe you have given up or never even started
+            bookkeeping{" "}
+            <span role="img" aria-label="Thinking emoji">
+              😤
+            </span>
+            .
+          </p>
         </div>
-      </p>
+      </div>
       <blockquote className="pull-quote">
         <q>
           Just because you outsource your bookkeeping does not mean you will be
@@ -56,13 +58,54 @@ const IndexPage = () => (
       </blockquote>
       <h3 className="header h3">My Services</h3>
       <ul>
-        <li>Quickbooks Set-up, Clean-up, Training, Conversion to the cloud</li>
-        <li>Monthly categorization and reconciliation</li>
-        <li>Payroll set-up</li>
-        <li>Issuance of 1099s</li>
-        <li>Receipt management</li>
-        <li>Accounts Receivable workflow and training</li>
-        <li>Accounts Payable management</li>
+        <li>
+          <svg aria-hidden="true" className="checkmark">
+            <use xlinkHref="/svg-defs.svg#svg-checkmark" />
+          </svg>
+          Quickbooks Set-up, Clean-up, Training, Conversion to the cloud
+        </li>
+        <li>
+          {" "}
+          <svg aria-hidden="true" className="checkmark">
+            <use xlinkHref="/svg-defs.svg#svg-checkmark" />
+          </svg>
+          Monthly categorization and reconciliation
+        </li>
+        <li>
+          {" "}
+          <svg aria-hidden="true" className="checkmark">
+            <use xlinkHref="/svg-defs.svg#svg-checkmark" />
+          </svg>
+          Payroll set-up
+        </li>
+        <li>
+          {" "}
+          <svg aria-hidden="true" className="checkmark">
+            <use xlinkHref="/svg-defs.svg#svg-checkmark" />
+          </svg>
+          Issuance of 1099s
+        </li>
+        <li>
+          {" "}
+          <svg aria-hidden="true" className="checkmark">
+            <use xlinkHref="/svg-defs.svg#svg-checkmark" />
+          </svg>
+          Receipt management
+        </li>
+        <li>
+          {" "}
+          <svg aria-hidden="true" className="checkmark">
+            <use xlinkHref="/svg-defs.svg#svg-checkmark" />
+          </svg>
+          Accounts Receivable workflow and training
+        </li>
+        <li>
+          {" "}
+          <svg aria-hidden="true" className="checkmark">
+            <use xlinkHref="/svg-defs.svg#svg-checkmark" />
+          </svg>
+          Accounts Payable management
+        </li>
       </ul>
     </section>
   </Layout>

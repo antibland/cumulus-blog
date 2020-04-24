@@ -7,6 +7,7 @@ module.exports = {
     title: `Cumulus Bookkeeping Solutions`,
     description: `Quickbooks Online Certified Proadvisor dedicated to helping small businesses understand their financial health, streamline processes, and prepare for tax time. All packages include QBO subscription and unlimited client support.`,
     author: `Andy Hoffman`,
+    image: `https://scontent-sea1-1.xx.fbcdn.net/v/t45.5328-0/c5.5.138.138a/p148x148/24293562_1528611323852591_2972124794830454784_n.png?_nc_cat=111&_nc_sid=c48759&_nc_ohc=3X8Qu9Mpq20AX_M-3hB&_nc_ht=scontent-sea1-1.xx&oh=d2dab6a2fc6061754e1e8e4bb4c89926&oe=5ECAD514`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

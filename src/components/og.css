@@ -50,6 +50,7 @@
   overflow: hidden;
   border-radius: var(--border-radius);
   margin-bottom: 15px;
+  box-shadow: var(--box-shadow);
 }
 
 .covid-message p {
@@ -194,11 +195,10 @@ h3 {
 }
 
 main h3:not(:first-child) {
-  padding-top: 120px;
   position: relative;
 }
 
-main h3:not(:first-child)::before {
+/* main h3:not(:first-child)::before {
   position: absolute;
   content: "";
   margin: 50px 0;
@@ -214,7 +214,7 @@ main h3:not(:first-child)::before {
   max-width: 75vw;
   left: 50%;
   transform: translateX(-50%);
-}
+} */
 
 a:link,
 a:visited {
@@ -438,7 +438,7 @@ main {
 
 #thanks .contact-form {
   padding: 3em;
-  background-color: var(--green);
+  background-color: rgba(177, 166, 166, 0.9);
 }
 
 .contact main {
@@ -455,7 +455,7 @@ main > section {
   background: white;
   text-align: center;
   margin-top: 0;
-  margin-bottom: 1.5em;
+  margin-bottom: 3.5em;
   margin-left: 0;
   margin-right: 0;
 }
@@ -472,6 +472,7 @@ main > section {
   text-align: left;
   background-color: hsla(210, 48%, 59%, 0.05);
   border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
   -webkit-font-smoothing: antialiased;
 }
 
@@ -648,7 +649,7 @@ button {
   visibility: hidden;
   transition: opacity 0.4s 0.1s ease-in, visibility 0.4s 0.1s ease-in,
     transform 0.4s 0.1s ease-in;
-  background-color: hsla(0, 0%, 100%, 0.6);
+  background-color: hsla(0, 0%, 100%, 0.9);
   justify-content: center;
   align-items: center;
 }

@@ -18,7 +18,6 @@ const contact = () => {
           </h3>
         </header>
         <div className="content align-center space-evenly">
-          <p className="center">I'll get back to you shortly.</p>
           <form
             method="POST"
             action="//formspree.io/laura.gershman1@gmail.com"

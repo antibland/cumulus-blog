@@ -11,7 +11,7 @@ const targetContent = () => {
         >
           <div className="flash-message">
             <p className="larger">Message sent.</p>
-            <p>Thank you.</p>
+            <p className="center">I'll get back to you shortly.</p>
           </div>
           <a aria-label="close modal" href="#close" className="cancel-x">
             <svg>

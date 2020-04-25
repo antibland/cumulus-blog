@@ -330,6 +330,7 @@ header {
 
 .social-item {
   opacity: 0;
+  margin: 0;
 }
 
 .social-item img,

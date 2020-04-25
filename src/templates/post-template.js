@@ -37,7 +37,7 @@ const PostTemplate = ({
       </Link>
       <article className="post single-post">
         <figure>{cover && <Image fixed={cover.fixed} alt={title} />}</figure>
-        <h1>
+        <h1 className="post-title">
           {title}{" "}
           <div className="post-meta">
             <img

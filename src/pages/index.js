@@ -24,11 +24,17 @@ const IndexPage = () => (
       </h3>
       <div className="index-message-container">
         <figure className="laura-cropped">
-          <img
-            loading="lazy"
-            src={"/laura_cropped@2x.jpg"}
-            alt="Laura Gershman, owner"
-          />
+          <picture>
+            <source
+              type="image/webp"
+              srcSet="/laura_cropped.webp 1x, /laura_cropped.webp 2x"
+            />
+            <img
+              loading="lazy"
+              src="/laura_cropped.jpg"
+              alt="Laura Gershman, owner"
+            />
+          </picture>
           <figcaption>Laura Gershman, owner</figcaption>
         </figure>
         <div className="content">

@@ -17,7 +17,7 @@ const Blog = ({ data }) => {
 
       {posts.map(post => {
         return (
-          <article className="post" key={post.id}>
+          <article className="post" key={post.id} id={post.slug}>
             <h2>{post.title}</h2>
             <Link className="post-cover-link" to={`/blog/${post.slug}`}>
               {post.cover && (

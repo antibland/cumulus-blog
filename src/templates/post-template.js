@@ -23,7 +23,7 @@ const options = {
 
 const PostTemplate = ({
   data: {
-    product: { title, createdAt, cover, content },
+    product: { title, slug, createdAt, cover, content },
   },
 }) => {
   return (
@@ -35,7 +35,7 @@ const PostTemplate = ({
         </svg>
         all posts
       </Link>
-      <article className="post single-post">
+      <article className="post single-post" id={slug}>
         <figure>{cover && <Image fixed={cover.fixed} alt={title} />}</figure>
         <h1 className="post-title">
           {title}{" "}
@@ -65,6 +65,7 @@ export const query = graphql`
   query GetSinglePost($slug: String) {
     product: contentfulPost(slug: { eq: $slug }) {
       title
+      slug
       createdAt
       content {
         json

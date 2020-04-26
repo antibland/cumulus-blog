@@ -30,7 +30,7 @@ const Layout = props => {
   return (
     <div className={props.page}>
       <Header siteTitle={data.site.siteMetadata.title} page={props.page} />
-      <div>
+      <div className="mainWrap">
         <main>{props.children}</main>
         <TargetContent />
         <Footer siteTitle={data.site.siteMetadata.title} />

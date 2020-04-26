@@ -94,6 +94,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  overflow-x: hidden;
 }
 
 body.modal-opened {
@@ -243,6 +244,11 @@ header {
   pointer-events: none;
 }
 
+.mainWrap {
+  background-color: white;
+  transform: translateZ(0);
+}
+
 .masthead {
   will-change: background-position;
   background-attachment: fixed;
@@ -254,7 +260,6 @@ header {
   display: flex;
   flex-direction: column;
   position: relative;
-  transform: translateZ(0);
 }
 
 .masthead::before {
@@ -264,7 +269,7 @@ header {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.35);
+  background-color: rgba(0, 0, 0, 0.25);
 }
 
 .webp .masthead {
@@ -984,7 +989,7 @@ li.oddball {
 
   .masthead {
     margin: 0 auto;
-    background-position: 30% 50%;
+    background-position: 30% -180px;
   }
 
   main {
@@ -1075,12 +1080,7 @@ li.oddball {
   * Tablet only
 */
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
-  .masthead {
-    background-size: auto 100vh;
-    background-position: 50% 0;
-  }
-}
+/* @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {} */
 
 /*
   * Feature Queries

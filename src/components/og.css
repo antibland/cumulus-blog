@@ -222,7 +222,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 15px;
+  padding: 0 30px 0 15px;
   max-width: 100%;
 }
 
@@ -254,6 +254,7 @@ header {
   display: flex;
   flex-direction: column;
   position: relative;
+  transform: translateZ(0);
 }
 
 .masthead::before {
@@ -282,6 +283,11 @@ header {
   );
 }
 
+[role="main"] {
+  position: relative;
+  top: 1rem;
+}
+
 .nav-items {
   display: flex;
   flex-direction: column;
@@ -308,8 +314,16 @@ header {
 .logo:focus,
 .nav-link.active,
 .nav-link:focus {
-  outline: 1px solid rgba(255, 255, 255, 0.9);
-  outline-offset: 1.15px;
+  outline: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+.logo:focus {
+  outline-offset: 1px;
+}
+
+.nav-link.active,
+.nav-link:focus {
+  outline-offset: 4px;
 }
 
 .social-items {
@@ -940,6 +954,7 @@ li.oddball {
 
   [role="main"] {
     flex: 1;
+    top: 0;
   }
 
   .nav-items {
@@ -956,6 +971,15 @@ li.oddball {
   .nav-link {
     padding: 0 7.5px;
     color: rgba(255, 255, 255, 0.92);
+  }
+
+  .nav-item:not(:last-child) .nav-link {
+    margin: 0 3px;
+  }
+
+  .nav-link.active,
+  .nav-link:focus {
+    outline-offset: 1px;
   }
 
   .masthead {

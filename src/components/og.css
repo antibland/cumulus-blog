@@ -248,6 +248,7 @@ header {
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: 50% 39%;
+  background-size: cover;
   padding: 5px 0 30px;
   width: 100%;
   display: flex;
@@ -262,7 +263,7 @@ header {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.35);
 }
 
 .webp .masthead {

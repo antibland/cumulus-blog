@@ -695,7 +695,7 @@ button {
   overflow: hidden;
 }
 
-#thanks:target .contact-form {
+#thanks .contact-form {
   max-width: 85vw;
   padding: 3em 2em;
 }

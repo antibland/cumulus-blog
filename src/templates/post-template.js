@@ -6,11 +6,14 @@ import Image from "gatsby-image"
 import Moment from "react-moment"
 import "../components/blog.css"
 
-import { BLOCKS, MARKS } from "@contentful/rich-text-types"
+import { BLOCKS, MARKS, INLINES } from "@contentful/rich-text-types"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 
 const Bold = ({ children }) => <span className="bold">{children}</span>
 const Text = ({ children }) => <p className="align-center">{children}</p>
+
+const website_url = "https://www.cumulusbookkeeper.com/"
+const ownWebsite = uri => uri.startsWith(website_url)
 
 const options = {
   renderMark: {
@@ -18,6 +21,17 @@ const options = {
   },
   renderNode: {
     [BLOCKS.PARAGRAPH]: (node, children) => <Text>{children}</Text>,
+    [INLINES.HYPERLINK]: node => {
+      return (
+        <a
+          href={node.data.uri}
+          target={`${ownWebsite(node.data.uri) ? "_self" : "_blank"}`}
+          rel={`${ownWebsite(node.data.uri) ? "" : "noopener noreferrer"}`}
+        >
+          {node.content[0].value}
+        </a>
+      )
+    },
   },
 }
 

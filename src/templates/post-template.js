@@ -29,7 +29,12 @@ const PostTemplate = ({
   return (
     <Layout page="blog">
       <SEO title={title} />
-      <Link className="post-back-link" to="/blog">
+      <Link
+        rel="noopener noreferrer"
+        target="_blank"
+        className="post-back-link"
+        to="/blog"
+      >
         <svg aria-hidden="true">
           <use xlinkHref="/svg-defs.svg#svg-back-arrow" />
         </svg>

@@ -19,7 +19,12 @@ const Blog = ({ data }) => {
         return (
           <article className="post" key={post.id} id={post.slug}>
             <h2>{post.title}</h2>
-            <Link className="post-cover-link" to={`/blog/${post.slug}`}>
+            <Link
+              rel="noopener noreferrer"
+              target="_blank"
+              className="post-cover-link"
+              to={`/blog/${post.slug}`}
+            >
               {post.cover && (
                 <Image fluid={post.cover.fluid} alt={post.title} />
               )}
@@ -34,7 +39,12 @@ const Blog = ({ data }) => {
             </Link>
             <div className="post-content">
               <p className="post-summary">{post.summary.summary}</p>
-              <Link className="plain-link" to={`/blog/${post.slug}`}>
+              <Link
+                rel="noopener noreferrer"
+                target="_blank"
+                className="plain-link"
+                to={`/blog/${post.slug}`}
+              >
                 read full post
               </Link>
             </div>

@@ -5,7 +5,7 @@ import SEO from "../components/seo"
 const contact = () => {
   return (
     <Layout page="contact">
-      <SEO title="Blog" />
+      <SEO title="Contact Me" />
       <section className="long-message" id="contact">
         <header>
           <h3 className="vector-button">

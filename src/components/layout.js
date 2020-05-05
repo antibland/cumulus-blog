@@ -32,9 +32,9 @@ const Layout = props => {
       <Header siteTitle={data.site.siteMetadata.title} page={props.page} />
       <div className="mainWrap">
         <main>{props.children}</main>
-        <TargetContent />
         <Footer siteTitle={data.site.siteMetadata.title} />
       </div>
+      <TargetContent />
     </div>
   )
 }

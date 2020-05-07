@@ -20,6 +20,7 @@
 
 .single-post .post-content {
   padding-top: 0;
+  padding-bottom: 0;
 }
 
 .single-post .post-title {
@@ -100,6 +101,18 @@
 .post blockquote {
   border-left: 3px solid lightgray;
   padding-left: 1.45rem;
+}
+
+/* Mailchimp form */
+
+.mailchimp-form {
+  width: 30rem;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.mailchimp-form-title {
+  color: white;
 }
 
 @media screen and (min-width: 40em) {

@@ -1,9 +1,11 @@
-import React from "react"
+import React, { useState } from "react"
 import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Image from "gatsby-image"
 import Moment from "react-moment"
+
+import addToMailchimp from "gatsby-plugin-mailchimp"
 import "../components/blog.css"
 
 import { BLOCKS, MARKS, INLINES } from "@contentful/rich-text-types"
@@ -36,10 +38,56 @@ const options = {
 }
 
 const PostTemplate = ({
+  location,
   data: {
     product: { title, slug, createdAt, cover, content },
   },
 }) => {
+  const [fname, setFName] = useState("")
+  const [lname, setLName] = useState("")
+  const [email, setEmail] = useState("")
+
+  const path = location.pathname
+
+  const _handleSubmit = e => {
+    e.preventDefault()
+    console.log("submitting...", email, fname, lname)
+    // const result = await addToMailchimp(email, {
+    //   FNAME: fname,
+    //   LNAME: lname,
+    // })
+
+    addToMailchimp(email, {
+      FNAME: fname,
+      LNAME: lname,
+    }) // listFields are optional if you are only capturing the email address.
+      .then(data => {
+        // I recommend setting data to React state
+        // but you can do whatever you want (including ignoring this `then()` altogether)
+        console.log("success", data)
+      })
+      .catch(() => {
+        // unnecessary because Mailchimp only ever
+        // returns a 200 status code
+        // see below for how to handle errors
+      })
+
+    // I recommend setting `result` to React state
+    // but you can do whatever you want
+  }
+
+  const _handleChangeFName = e => {
+    setFName(e.target.value)
+  }
+
+  const _handleChangeLName = e => {
+    setLName(e.target.value)
+  }
+
+  const _handleChangeEmail = e => {
+    setEmail(e.target.value)
+  }
+
   return (
     <Layout page="blog">
       <SEO title={title} />
@@ -71,6 +119,35 @@ const PostTemplate = ({
           {documentToReactComponents(content.json, options)}
         </div>
       </article>
+
+      <form onSubmit={_handleSubmit} className="mailchimp-form">
+        <h3 className="mailchimp-form-title">Join the Mailing List</h3>
+        <input
+          type="email"
+          onChange={_handleChangeEmail}
+          placeholder="email"
+          name="email"
+          value={email}
+          required
+        />
+        <input
+          type="text"
+          onChange={_handleChangeFName}
+          placeholder="First name"
+          name="FNAME"
+          value={fname}
+          required
+        />
+        <input
+          type="text"
+          onChange={_handleChangeLName}
+          placeholder="Last name"
+          name="LNAME"
+          value={lname}
+          required
+        />
+        <button type="submit">Submit</button>
+      </form>
     </Layout>
   )
 }

@@ -46,34 +46,24 @@ const PostTemplate = ({
   const [fname, setFName] = useState("")
   const [lname, setLName] = useState("")
   const [email, setEmail] = useState("")
+  const [formSuccess, setFormSuccess] = useState(false)
 
   const path = location.pathname
 
   const _handleSubmit = e => {
     e.preventDefault()
-    console.log("submitting...", email, fname, lname)
-    // const result = await addToMailchimp(email, {
-    //   FNAME: fname,
-    //   LNAME: lname,
-    // })
 
     addToMailchimp(email, {
       FNAME: fname,
       LNAME: lname,
-    }) // listFields are optional if you are only capturing the email address.
+      MMERGE3: path,
+    })
       .then(data => {
-        // I recommend setting data to React state
-        // but you can do whatever you want (including ignoring this `then()` altogether)
-        console.log("success", data)
+        if (data.result === "success") {
+          setFormSuccess(true)
+        }
       })
-      .catch(() => {
-        // unnecessary because Mailchimp only ever
-        // returns a 200 status code
-        // see below for how to handle errors
-      })
-
-    // I recommend setting `result` to React state
-    // but you can do whatever you want
+      .catch(() => {})
   }
 
   const _handleChangeFName = e => {
@@ -122,6 +112,11 @@ const PostTemplate = ({
 
       <form onSubmit={_handleSubmit} className="mailchimp-form">
         <h3 className="mailchimp-form-title">Join the Mailing List</h3>
+        {formSuccess && (
+          <p className="subscribe-success">
+            Thank you for subscribing. You will hear from me soon.
+          </p>
+        )}
         <input
           type="email"
           onChange={_handleChangeEmail}

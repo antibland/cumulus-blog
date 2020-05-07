@@ -14,7 +14,7 @@ module.exports = {
       resolve: "gatsby-plugin-mailchimp",
       options: {
         endpoint:
-          "https://cumulusbookkeeper.us4.list-manage.com/subscribe/post?u=a9dbc0592f1061ce7ba78351d&amp;id=fc2a3e95ef", // add your MC list endpoint here; see instructions below
+          "https://cumulusbookkeeper.us4.list-manage.com/subscribe/post?u=a9dbc0592f1061ce7ba78351d&amp;id=fc2a3e95ef",
       },
     },
     `gatsby-plugin-react-helmet`,

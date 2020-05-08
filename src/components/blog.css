@@ -1,5 +1,5 @@
 .post:not(:last-child) {
-  margin-bottom: 4rem;
+  margin-bottom: 2.5rem;
 }
 
 .post .post-content {

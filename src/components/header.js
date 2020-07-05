@@ -5,7 +5,7 @@ import MainMenu from "./menu"
 
 const MESSAGES = {
   home: "Let's Make a Plan",
-  blog: "Cumulus Blog",
+  blog: "",
   contact: "Contact Me",
 }
 
